@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><b>Counting the Number of Clicks made- Allowed limit is three.</b></p>
+
+<button type="button" onclick="myFunction()" id="click">Count!</button>
+
+<p id="demo">0</p>
+
+<script>
+var count = 0;         //Global Variable
+
+//Function called onclick.
+function myFunction(){
+
+    //IF loop checking for count of  clicks.
+	if(count < 3){
+    count += 1;
+    document.getElementById("demo").innerHTML = count;
+    }
+    //ELSE loop to warn click count exceeded.
+    else {
+    alert("Only Three clicks are allowed")
+    document.getElementById("click").style.display = 'none';
+    document.getElementById("demo").innerHTML = '**Three clicks are over**';
+    document.getElementById("demo").style.color = 'red';
+    }
+}
+</script>
+
+</body>
+</html>
